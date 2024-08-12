@@ -1,0 +1,76 @@
+Let’s create a virtual environment and activate it:
+
+pip install pipenv
+pipenv shell
+
+Install Django and create a project named backend:
+
+pipenv install django
+django-admin startproject backend
+
+
+If everything works you should see the “Congratulations” page from Django.
+
+
+Navigate to backend/settings.py and add todo to the list of INSTALLED_APPS
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'todo',
+]
+
+
+Django Rest Framework and Django cors headers
+
+
+1. pip install django djangorestframework     OR pip install django
+2. django-admin startproject backendDjango   // this is the project so now we can create apps inside it for render anyting  or for databases
+3. django-admin startapp api     // create APP
+4. we have to connect that APP with our project to do this , go in settins.py and append 'api.apps.ApiConfig' in INSTALLED_APPS LIST. 'api.apps.ApiConfig' this ApiConfig is class inside apps.py
+5. along with above step append also     'rest_framework'
+6. we have to create view fro that we have to create endpoint in views.py. Endpoint means location on the server , where u goto like / hello or / hi
+7. create urls.py and then did something
+8. now run this python .\manage.py makemigrations     // reason  is to update the database
+9. python .\manage.py migrate
+10. python .\manage.py runserver
+
+
+
+
+In your Django project, you are using Django Rest Framework (DRF) for building your API. DRF is a powerful and widely used toolkit for building Web APIs in Django applications. Here's a recap of what you've used for DRF and some additional components you can utilize in the future:
+
+### What You've Used for DRF:
+
+1. **Generics**: In your `views.py`, you've used DRF's `generics.ListCreateAPIView`, which is a generic class-based view for listing and creating objects. This is a common choice for building API endpoints that provide list and create functionality.
+
+2. **Serializers**: You've defined a `RegistrationSerializer` that handles the transformation of `Registration` model instances into a format that can be easily rendered into JSON or other content types. Serializers are a fundamental part of DRF, allowing you to convert complex data types (such as Django model instances) into native Python data types that can be easily rendered into JSON.
+
+### What Else You Can Use with DRF:
+
+1. **Viewsets**: DRF provides viewsets, which are a more powerful way to work with models and perform common actions (list, create, retrieve, update, and delete) in a concise and DRY (Don't Repeat Yourself) manner. Viewsets often simplify the view code by combining the logic for multiple HTTP methods (e.g., GET, POST, PUT) into a single class.
+
+2. **Routers**: DRF routers are used to automatically generate the URL patterns for the viewsets. Routers make it easier to manage and organize the URLs of your API endpoints.
+
+3. **Permissions and Authentication**: DRF offers a range of built-in authentication and permission classes to help secure your API. You can easily configure your views to require authentication and define custom permissions for fine-grained access control.
+
+4. **Pagination**: You can set up pagination options for your API views to control the number of items returned in each response, making it suitable for large datasets.
+
+5. **Filters**: You can implement filtering in your API to allow clients to narrow down the results based on certain criteria, such as filtering by specific fields or applying complex queries.
+
+6. **Nested Serializers**: When dealing with related models or nested data structures, you can use DRF's nested serializers to handle the serialization and deserialization of nested objects.
+
+7. **API Versioning**: As your API evolves, you can implement versioning to ensure backward compatibility for existing clients while introducing changes to newer versions of your API.
+
+8. **Throttling**: Implement rate limiting and throttling policies to prevent abuse and control the rate at which clients can make requests to your API.
+
+9. **Custom Endpoints**: You can create custom API endpoints beyond the standard CRUD operations to handle specific actions in your application.
+
+10. **Authentication Tokens and OAuth**: Implement different authentication methods, such as token-based authentication and OAuth, to secure access to your API.
+
+DRF provides extensive documentation and a wide range of features to address various API development needs. You can explore these features as your project requirements evolve, making it a powerful tool for building robust and feature-rich APIs in your Django applications.
+
