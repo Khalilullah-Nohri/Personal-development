@@ -50,7 +50,7 @@ This repository is primarily for my personal development, but I welcome contribu
 
 If you have any questions, suggestions, or want to discuss potential freelance work, feel free to contact me:
 
-- Email: [khalilnohri666@gmail.com](mailto:khalilnohri666@gmail.com)
+- Email: [nohrikhalilullah@gmail.com](mailto:nohrikhalilullah@gmail.com)
 - LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/khalilullah-dev)
 
 Thank you for visiting my repository!
